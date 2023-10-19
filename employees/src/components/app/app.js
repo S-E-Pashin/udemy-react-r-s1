@@ -14,7 +14,7 @@ function App() {
     {name: 'Никита', salary: 3000, increase: true},
     {name: 'Иван', salary: 54000, increase: false},
     {name: 'Иван2', salary: 53000, increase: false},
-    {name: 'Иван3', salary: 15000, increase: false},
+    {name: 'Иван3', salary: 15000, increase: true},
   ];
 
   return (
