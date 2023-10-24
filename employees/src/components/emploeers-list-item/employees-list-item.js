@@ -8,6 +8,7 @@ class EmployeesListItem extends Component {
     super(props);
     this.state = {
       increase: false,
+      beLike: false,
     }
   }
 
@@ -26,27 +27,25 @@ class EmployeesListItem extends Component {
   }
 
   onLike = (e, clN) => {
-    let classElement = this;
-    console.log(classElement);
-    console.log(clN);
-
-    this.setState(
-      // console.log("dfdf")
+    this.setState( ({beLike}) => ({
+      beLike: !beLike
+      })
     )
-      // console.log(this)
-
-    // console.log(e.target.value);
   }
 
   render() {
-  const {name, salary} = this.props;
-  const {increase} = this.state;
-
-  console.log(this);
+    const {name, salary} = this.props;
+    const {increase} = this.state;
+    const {beLike} = this.state;
+  // console.log(this);
     let classNames = 'list-group-item d-flex justify-content-between';
 
     if (increase) {
       classNames += ' increase';
+    }
+
+    if (beLike) {
+      classNames += ' like';
     }
 
     return (
