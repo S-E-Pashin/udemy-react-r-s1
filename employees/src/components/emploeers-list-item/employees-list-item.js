@@ -25,9 +25,24 @@ class EmployeesListItem extends Component {
     }))
   }
 
+  onLike = (e, clN) => {
+    let classElement = this;
+    console.log(classElement);
+    console.log(clN);
+
+    this.setState(
+      // console.log("dfdf")
+    )
+      // console.log(this)
+
+    // console.log(e.target.value);
+  }
+
   render() {
   const {name, salary} = this.props;
   const {increase} = this.state;
+
+  console.log(this);
     let classNames = 'list-group-item d-flex justify-content-between';
 
     if (increase) {
@@ -36,7 +51,7 @@ class EmployeesListItem extends Component {
 
     return (
       <li className={classNames}>
-        <span className="list-group-item-label">{name}</span>
+        <span className="list-group-item-label" onClick={(e) => this.onLike(e, {classNames})}>{name}</span>
         <input type="text" className="list-group-item-input" defaultValue={salary + ' $'}/>
 
         <div className='d-flex justify-content-center align-items-center'>
