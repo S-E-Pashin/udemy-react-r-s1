@@ -9,7 +9,10 @@ const EmployeesList = ({data}) => {
 
     return (
       // <EmployeesListItem key ={item.id} name={item.name} salary={item.salary} increase={item.increase}/>
-      <EmployeesListItem key ={id} {...itemProps}/>
+      <EmployeesListItem key ={id}
+                         {...itemProps}
+      onDelete={() => console.log('Deleted')}
+      />
       // <EmployeesListItem name={item.name} salary={item.salary} {...item}/> то же самое.
     )
   })

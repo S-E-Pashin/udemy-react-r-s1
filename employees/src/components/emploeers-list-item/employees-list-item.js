@@ -34,7 +34,7 @@ class EmployeesListItem extends Component {
   }
 
   render() {
-    const {name, salary} = this.props;
+    const {name, salary, onDelete} = this.props;
     const {increase} = this.state;
     const {beLike} = this.state;
   // console.log(this);
