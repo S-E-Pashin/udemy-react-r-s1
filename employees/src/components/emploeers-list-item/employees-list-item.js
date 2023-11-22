@@ -18,7 +18,12 @@ class EmployeesListItem extends Component {
   //   }))
   // }
 
-  // Оба варианта верны. В варианте ниже передаваемый потов(В будущем state) сразу деструктуризируется и в него передается значение из increase и дальше в значение increase записывается противоположное ему булево значение.
+  // Оба варианта верны.
+  // В варианте ниже передаваемый потов
+  // (В будущем state) сразу деструктуризируется
+  // и в него передается значение из increase и
+  // дальше в значение increase записывается
+  // противоположное ему булево значение.
 
   onIncrease = () => {
     this.setState(({increase}) => ({
@@ -61,7 +66,9 @@ class EmployeesListItem extends Component {
           </button>
 
           <button type="button"
-                  className="btn-trash btn-sm ">
+                  className="btn-trash btn-sm "
+                  onClick={onDelete}
+          >
             <i className="fas fa-trash"></i>
           </button>
           <i className="fas fa-star"></i>
